@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head id="Head1">
+    <title>名字待定的手机界面</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=0,maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/public.css' %}" rel="stylesheet" />
+    <script src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <a href="index.html"><img src="{% static 'Images/icon_home.png' %}"></a>
+        <h1 class="title">建设ing</h1>
+        </div>
+        <div class="sg_ing">
+            <img src="{% static 'Images/sg.jpg' %}" >
+        </div>
+    </div>    
+    <footer>
+        <ul class="footer" type="none">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </footer>
+</body>
+</html>

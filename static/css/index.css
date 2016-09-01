@@ -1,0 +1,430 @@
+@charset "utf-8";
+
+/*==========@@HTML默认 开始@@==========*/
+
+/*基本*/
+
+*{ font-size:16px;
+	padding:0px;
+	 margin:0px ;}
+
+body{color:#000;
+	background-color: #FFF;
+	padding:0px; 
+	margin:0px auto;
+	overflow:scroll;
+	overflow-x:hidden;
+	overflow-y:auto;
+	font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+	font-size:16px;
+	max-width:640px;
+	min-width: 320px;
+}
+
+div{ margin:0; padding:0; border:0; color:#333333; }
+
+img{ margin:0; padding:0; border:0; }
+
+p{ margin: 0px 0px 1em 0;}
+
+b,strong {font-weight: bold;}
+
+table { border-collapse: collapse; border-spacing: 0;/* Remove most spacing between table cells.*/}
+
+li{ list-style: none outside none;}
+
+slides
+
+/*链接*/
+
+a{ text-decoration:none; color:#000; background: transparent;  outline:none}
+
+a:visited {}
+
+a:focus { outline:none; }
+
+a:hover, a:active{ color:#ff539f; outline:none;}
+
+
+ i
+/*标题*/
+
+h1 { font-size: 1.3em;margin:  0;}
+
+h2 {font-size: 1.2em; margin: 0;}
+
+h3 { font-size: 1.17em;margin: 0;}
+
+h4 {font-size: 1em;margin:0;}
+
+h5 {font-size: 0.83em;margin: 0;}
+
+h6 { font-size: 0.67em;margin: 0;}
+
+
+
+/*表单*/
+
+form {margin: 0;}
+
+button,input,select,textarea {
+
+    font-size: 100%;  /* Correct font size not being inherited in all browsers. */
+
+    margin: 0;  /* Address margins set differently in IE 6/7, Firefox 3+, Safari 5,and Chrome */
+
+    vertical-align: baseline; /* Improve appearance and consistency in all browsers */
+
+    *vertical-align: middle; /* Improve appearance and consistency in all browsers */
+
+}
+
+button,select {text-transform: none;}
+
+input{ -webkit-border-radius:5px; -moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;
+
+	background-color: #FFFFFF;border: 1px solid #E8E8E8;margin: 3px 0px;padding: 5px 3px;
+
+	width:99%;line-height: normal;
+
+}
+
+textarea{-moz-box-sizing: border-box;
+
+    -webkit-border-radius:5px; -moz-border-radius:5px; -o-border-radius:5px;border-radius:5px;
+
+	background-color: #FFFFFF;border: 1px solid #E8E8E8;margin: 3px 0px;
+
+	padding: 5px 3px;width:99%;
+
+}
+
+
+
+/*其它*/
+
+blockquote {margin: 1em 40px;}
+
+dfn {font-style: italic;}
+
+hr {-moz-box-sizing: content-box;box-sizing: content-box;height: 0;}
+
+code, kbd, pre, samp {font-size: 1em;}
+
+pre {margin: 1em 0; white-space: pre;white-space: pre-wrap;word-wrap: break-word; }
+
+small {font-size: 80%;}
+
+sub,sup {font-size: 75%;line-height: 0; position: relative;vertical-align: baseline; /* Prevent `sub` and `sup` affecting `line-height` in all browsers.*/}
+
+sup {top: -0.5em;}
+
+sub {bottom: -0.25em;}
+
+dl{margin: 1em 0;}
+
+dd {margin: 0 0 0 40px;}
+
+audio:not([controls]) {display: none; height: 0;}
+
+/*==========@@HTML默认  结束@@==========*/
+
+
+/*清除浮动*/
+
+.clear { display:block; clear:both;}
+
+.float_left { float:left; }
+
+.float_right { float:right; }
+
+
+
+/*对齐方式*/
+
+.left { text-align: left}
+
+.right {text-align: right}
+
+.center{ text-align: center}
+
+
+
+/*其它*/
+
+.hide { display:none; }  /*隐藏*/
+
+.more{ float: right; padding-right:5px;} /*more链接*/
+
+.code_image{ cursor: pointer; padding-bottom:3px;} /*验证码图片样式*/
+
+
+
+/*必须输入，主要*/
+
+.required{ color:red; font-weight:bold;}
+
+.form_text_verifycode { width:80px; }
+
+.form_radio{ width:auto; border:0;}
+
+.form_checkbox{ width:auto; border:0}
+
+/*==========@@通用 结束@@==========*/
+
+/*==========@@布局  开始@@==========*/
+
+.body_article, .body_download, .body_picture, .body_product, .body_single, .body_video, .body_job, .body_feedback{ background-color:#e2e3e6; }
+
+.single, .article, .picture, .download, .video, .product, .job, .guestbook, .sitemap, .feedback{ width:99%; margin:0px auto }
+
+#header, #content , #footer{ width: 98%;  margin: 0px auto; border:0px solid green;}
+
+/*==========@@布局  结束@@==========*/
+
+/*==========@@公共板块 开始@@==========*/
+
+/*===FlexSlider幻灯片  开始===*/
+
+#banner{}
+
+.flexslider{ position: relative; clear:both;}
+
+/*幻灯片标题*/
+
+ .flex-caption { 
+ 	width:100%; 
+ 	padding:3px 0px; 
+ 	position: absolute; 
+ 	bottom: 3px;
+ 	color: #fff;
+ 	text-align: right;
+ 	font-size: 14px;line-height: 22px;height:22px;max-width:640px}
+
+/* FlexSlider Necessary Styles*/
+
+.flexslider {
+	margin: 0; 
+	padding: 0;
+}
+#slides{
+	margin: 0;
+}
+#slidesbg1{
+	background: url(../Images/login-bg.jpg) center 0px;
+	height: 200px;
+}
+
+#slidesbg2{
+	background: url(../Images/login-bg.jpg) center -240px;
+	height: 200px;
+}
+
+#slidesbg3{
+	background: url(../Images/login-bg.jpg) center -480px;
+	height: 200px;
+}
+#slidesbg4{
+	background: url(../Images/login-bg.jpg) center -720px;
+	height: 200px;
+}
+
+.flexslider .slides > li {
+	display: none; 
+	-webkit-backface-visibility: hidden;
+	height: 100%;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flexslider .slides img {
+	width: 100%; 
+	height: 100%;
+	display: block;
+}
+
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+
+html[xmlns] .slides {display: block;}
+
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+
+/* If you are not using another script, such as Modernizr, make sure you
+
+ * include js that eliminates this class on page load */
+
+.no-js .slides > li:first-child {display: block;}
+
+/* FlexSlider Default Theme
+
+*********************************/
+
+.flexslider { margin: 0 0; background: #fff;  zoom: 1; }
+
+.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+
+.loading .flex-viewport { max-height: 500px; }
+
+.flexslider .slides { zoom: 1; }
+
+.carousel li { margin-right: 5px; }
+
+/* Direction Nav */
+/* Pause/Play */
+
+.flex-pauseplay a { display: block; width: 20px; height: 20px; position: absolute; bottom: 5px; left: 10px; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: #000; }
+
+.flex-pauseplay a:before  { font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004'; }
+
+.flex-pauseplay a:hover  { opacity: 1; }
+
+.flex-pauseplay a.flex-play:before { content: '\f003'; }
+
+
+
+/* Control Nav */
+
+/*.flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}*/
+
+.flex-control-nav{ width: 100%;position:absolute; bottom:10px;  margin:0px; text-align: center; border:0px dashed red}
+
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); box-shadow: inset 0 0 3px rgba(0,0,0,0.3); }
+
+.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+
+.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+
+
+
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+
+.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+
+.flex-control-thumbs img:hover {opacity: 1;}
+
+.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+/*===FlexSlider幻灯片  结束===*/
+
+/*版权信息*/
+
+.copyright{ padding:3px; text-align:center; font-size:14px; color:#666; border:0px solid red}
+
+.copyright a{color:#666; font-size:14px;}
+
+.TechnicalSupport{ text-align:center; font-size:14px; color:#666; padding-bottom:5px;}
+
+.TechnicalSupport a{color:#666; font-size:14px;}
+
+/*==========@@公共板块 结束@@==========*/
+
+/*==========@@频道页面 开始@@==========*/
+
+
+/*首页第一个频道列表导航*/
+
+.channellist1{
+ 	width:99%;
+ 	border:0px solid red; 
+ 	margin:0px auto; 
+ 	overflow:hidden;
+ }
+
+.channellist1 li{
+	float:left;
+	text-align: center; 
+	border:0px dashed blue; 
+	width:50%; 
+}
+
+.channellist1 li a{
+	display:block; 
+	margin:5px; 
+	padding-top:0px; 
+	overflow:hidden; 
+	line-height:100px; 
+	color:#FFF;
+	font-size: 1.1em;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px; 
+	-o-border-radius:8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 1px 3px rgb(190, 190, 190); 
+	-moz-box-shadow: 0px 1px 3px rgb(190, 190, 190); 
+	-o-box-shadow: 0px 1px 3px rgb(190, 190, 190); 
+	box-shadow: 0px 1px 3px rgb(190, 190, 190);
+	text-decoration: none;
+}
+.channel_icon1{
+	float: right;
+	color: #fff;
+	margin-right: 15px;
+	margin-top: 30px;
+	line-height: 50px;
+}
+.channel_icon2{
+	float: left;
+	color: #fff;
+	margin-left: 15px;
+	margin-top: 30px;
+	line-height: 50px;
+}
+.channel_icon3{
+	float: right;
+	color: #fff;
+	margin-right: 15px;
+	margin-top: 20px;
+	line-height: 50px;
+}
+.channel_icon4{
+	float: left;
+	color: #fff;
+	margin-left: 15px;
+	margin-top: 20px;
+	line-height: 50px;
+}
+.channellist1 li .ChannelName1{  border-radius:0 50px 0 50px;}
+.channellist1 li .ChannelName2{  border-radius:50px 0 50px 0; }
+/*首页第二个频道列表导航*/
+
+.channellist2{ 
+	width:90%;
+	margin:0px auto; 
+	overflow:hidden;
+	margin-top: 10px;
+}
+
+.channellist2 li{
+	margin: 0 0 5px 0;
+	border: 0;
+	display: inline-block;
+	text-align: center; 
+	width: 100%; 
+	overflow: hidden;
+	-webkit-box-shadow: 2px 2px 2px rgb(190, 190, 190); 
+	-moz-box-shadow: 2px 2px 2px rgb(190, 190, 190); 
+	-o-box-shadow: 2px 2px 2px rgb(190, 190, 190); 
+	box-shadow: 2px 2px 2px rgb(190, 190, 190);
+	box-shadow:2px 2px 2px rgb(190, 190, 190);
+}
+
+.channellist2 li a{
+	text-decoration: none;
+	display:block;  
+	padding-top:0px; 
+	height: 30px;
+	padding-top: 5px;
+	color:#00375b;
+	border-radius: 3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px; 
+	-o-border-radius:3px; 
+}

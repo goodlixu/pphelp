@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head id="Head1">
+    <title>“人人帮”移动互助教育系统</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=0,maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <link rel="stylesheet" href="{% static 'css/public.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/idangerous.swiper.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}">
+    <script src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+         <a href="/"><img src="{% static 'Images/icon_home.png' %}"></a>
+        <h1 class="title">个人中心</h1>
+		{{ change_result }}  
+        </div>
+        <div class="swiper-container swiper-parent">
+            <div class="swiper-wrapper">
+                <!--Menu page-->
+                <div class="swiper-slide sliderbg_menu">
+                    <div class="swiper-container swiper-nested">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <div class="menu">
+                                        <div class="user_top">
+                                            <img src="Images/userbg.jpg">
+                                            <div class="head_pic"><img src="Images/user.jpg' %}"></div>
+                                            <div class="head_name">NaGi</div>
+                                        </div>
+                                        <ul type="none" class="user_butul1">
+                                        <li class="user_but"><a href="#" onclick="swiperParent.swipeTo(1);"><div class="but_pic" style="background:#F4499A;"><i class=" icon-bell-alt icon-large"></i></div><span>预约课程</span><i class="icon-angle-right icon-large but_right"></i></a><span class="but_hr"></span></li>
+                                        <li class="user_but"><a href="#" onclick="swiperParent.swipeTo(2);"><div class="but_pic" style="background:#FDCE08;"><i class=" icon-trophy icon-large"></i></div><span>完成课程</span><i class="icon-angle-right icon-large but_right"></i></a></li>
+                                        </ul>
+                                        <ul type="none" class="user_butul2">
+                                        <li class="user_but"><a href="#" onclick="swiperParent.swipeTo(4);"><div class="but_pic" style="background:#6CBCFC;"><i class="icon-calendar icon-large"></i></div><span>个人信息</span><i class="icon-angle-right icon-large but_right"></i></a><span class="but_hr"></span></li>
+                                        <li class="user_but"><a href="#" onclick="swiperParent.swipeTo(3);"><div class="but_pic" style="background:#FD7E3E;"><i class=" icon-flag icon-large"></i></div><span>关注课程</span><i class="icon-angle-right icon-large but_right"></i></a><span class="but_hr"></span></li>
+                                        <li class="user_but"><a href="#" onclick="swiperParent.swipeTo(5);"><div class="but_pic" style="background:#6CD253;"><i class="icon-coffee icon-large"></i></div><span>邀请朋友</span><i class="icon-angle-right icon-large but_right"></i></a></li>
+                                        </ul>
+                                    <div class="clear"></div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div> 
+                </div>
+                  
+            <!--Page 1 content-->
+                <div class="swiper-slide sliderbg">
+                    <div class="swiper-container swiper-nested1" >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <div class="pages_container" >
+                                        <div class="page1">
+                                            <img src="Images/login.jpg" class="order_bg">
+                                            <div class="page1_height">
+                                                <div class="form_bg"></div>
+                                                <form action="#" method="get">
+                                                <ul type="none" class="order_form">
+                                                    <h3><i class=" icon-bell-alt icon-large" style="color:#F4499A;"></i>预约课程</h3>
+                                                    <span class="order_line"></span>
+                                                    {% for item in info %}
+													<li><span class="order_name" style="color:#fff;">{{ item.subject }}</span>
+                                                        <span class="order_text"><p>此课的授课老师是：</p><p>{{ item.teacher }}</p><p>{{ item.class_info }}</p></span>
+                                                    </li>
+													{% endfor %}
+                                                </ul>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    <div class="back_user" style="background:#F4499A;"><a href="#" onclick="swiperParent.swipeTo(0);" > <i class="icon-reply icon-large"></i></a></div>
+                                    <div class="clear"></div>
+                                    </div>
+                                    <!--End of page container-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar1"></div>
+                    </div>
+                </div>
+            <!--Page 2 content-->
+                <div class="swiper-slide sliderbg">
+                    <div class="swiper-container swiper-nested2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <div class="pages_container">
+                                    222222222222222222222222222<br><br><br><br><br><br><br>222222
+                                   <div class="back_user" style="background:#FDCE08;"><a href="#" onclick="swiperParent.swipeTo(0);" > <i class="icon-reply icon-large"></i></a></div>
+                                    <div class="clear"></div>
+                                    </div>
+                                                    <!--End of page container-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar2"></div>
+                    </div>
+                </div>
+                 
+            <!--Page 3 content-->
+                <div class="swiper-slide sliderbg">
+                    <div class="swiper-container swiper-nested3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <div class="pages_container">
+                                       333333333333333333333333333333<br><br><br><br><br><br><br>
+                                     <div class="back_user" style="background:#FD7E3E;"><a href="#" onclick="swiperParent.swipeTo(0);" > <i class="icon-reply icon-large"></i></a></div> 
+                                     <div class="clear"></div>  
+                                    </div>
+                                                    <!--End of page container-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar3"></div>
+                    </div>
+                </div>
+                 
+           <!--Page 4 content-->
+                <div class="swiper-slide sliderbg">
+                    <div class="swiper-container swiper-nested1" >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <div class="pages_container" >
+                                      
+									  
+                                        <div class="personal">
+                                            <div class="p_img"><img src="Images/user.jpg"></div>
+                                            <div class="p_name">NaGi</div>
+                                            <input class="p_change" type="button" onclick="newdiv()" value="点击修改"/>
+                                            <script type="text/javascript">
+                                                function newdiv(){
+                                                    var a=document.getElementById('p_changetable');
+                                                    var b=document.getElementById('p_ul');
+                                                    a.style.display='block';
+                                                    b.style.display="none";
+                                                }
+                                            </script>
+                                       </div>
+                                       <div class="personal_tri"></div>
+											
+                                            <ul class="p_ul" id="p_ul">
+												{% for item2 in information %}
+                                                 <li><i class="  icon-user icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">Gender</span><span class="p_mes" id="sex1">{{ item2.gender }}</span></li>
+                                                <li><i class=" icon-map-marker icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">City</span><span class="p_mes">{{ item2.city }}</span></li>
+                                                <li><i class="  icon-suitcase icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">School</span><span class="p_mes">{{ item2.school }}</span></li>
+                                                <li><i class=" icon-coffee icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">Birthday</span><span class="p_mes">{{ item2.birthday }}</span></li>
+                                                <li><i class=" icon-envelope icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">E-mail</span><span class="p_mes">{{ item2.email }}</span></li>
+												{% endfor %}
+                                            </ul>
+											
+                                        <div class="p_changetable" id="p_changetable">
+											 
+                                            <ul class="p_ul">
+											<form method='POST' action='/change_info'>{% csrf_token %}
+                                                 <li><i class="  icon-user icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">Gender</span><input type="text" class="p_text" id="sex" name='gender'></li>
+                                                <li><i class=" icon-map-marker icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">City</span><input type="text" class="p_text" name='city'></li>
+                                                <li><i class="  icon-suitcase icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">School</span><input type="text" class="p_text" name='school'></li>
+                                                <li><i class=" icon-coffee icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">Birthday</span><input type="text" class="p_text" name='birthday'></li>
+                                                <li><i class=" icon-envelope icon-large"></i><!-- <span class="p_line"></span> --><span class="p_message">E-mail</span><input type="text" class="p_text" name='email'></li>
+                                                <input type="submit" value="提  交" class="p_submit" onclick="backdiv()">
+												</form>
+                                                <script type="text/javascript">
+                                                function backdiv(){
+                                                    var a=document.getElementById('p_changetable');
+                                                    var b=document.getElementById('p_ul');
+                                                    a.style.display='none';
+                                                    b.style.display="block";
+                                                }
+                                            </script>
+                                            </ul>
+											
+                                        </div>
+                                       
+                                       <div class="back_user" style="background:#6CBCFC; border:1px solid #fff;"><a href="#" onclick="swiperParent.swipeTo(0);" > <i class="icon-reply icon-large"></i></a></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!--End of page container-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar4"></div>
+                    </div>
+                </div>    
+
+
+            <!--Page 5 content-->
+                <div class="swiper-slide sliderbg">
+                    <div class="swiper-container swiper-nested1" >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <div class="pages_container" >
+                                    1111111111111111111111111111<br><br><br><br><br><br><br>
+                                    1111111111111111111111111
+                                   <div class="back_user" style="background:#6CD253;"><a href="#" onclick="swiperParent.swipeTo(0);" > <i class="icon-reply icon-large"></i></a></div>
+                                    <div class="clear"></div>
+                                    </div>
+                                    <!--End of page container-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar5"></div>
+                    </div>
+                </div>              
+                   
+                 <!--End of pages--> 
+
+                </div>
+                <div class="pagination"></div>
+              </div>
+            <script type="text/javascript" src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/jquery.swipebox.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/idangerous.swiper-2.1.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/idangerous.swiper.scrollbar-2.1.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/jquery.tabify.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/code.js' %}"></script>
+
+    </div>  
+    <footer>
+        <ul class="footer" type="none">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </footer>
+ 
+ 
+</body>
+</html>

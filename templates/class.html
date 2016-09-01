@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head id="Head1">
+    <title>“人人帮”移动互助教育系统</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=0,maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/public.css' %}" rel="stylesheet" />
+    <script src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'colors/corporate/corporate.css' %}">
+</head>
+<body>
+    <div class="container">
+<!--         <div class="blog_bg"><img src="Images/about.jpg"></div> -->
+        <div class="header">
+            <a href="/"><img src="{% static 'Images/icon_home.png' %}"></a>
+        <h1 class="title">课程预约</h1>
+        </div>
+        <div class="blog">
+<!--             <h2 class="page_title">Blog</h2> -->
+                <div class="toogle_wrap_blog">
+                    <div class="trigger_blog"><a href="#">课程列表</a></div>
+                        <div class="toggle_container_blog">
+                            <ul class="listing_detailed">
+                            {% for item in info %}
+								<li><a href="#">{{ item.subject }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                </div>
+				{% for item in info %}
+                <ul class="posts" type="none">
+                        <li class="post">
+                             <a href="#" class="post_more"></a>                     
+                             <div class="post_right_reveal">
+                             <h4><a href="#" onclick="swiperParent.swipeTo(4);">{{ item.class_info }}</a></h4>
+                             </div>
+							 
+                             <div class="post_right_unreveal">
+                             此课的授课老师是<a href="#">{{ item.teacher }}</a>
+                             <span class="post_comments">?? 人已上过此课程</span>
+                             <form action="/appoint" method="post">{% csrf_token %}<input type="submit" value="预约此课" class="but_order" name={{ item.teacher }}></form>
+                             </div> 
+							
+                            <div class="post_left">
+                                <span class="class">{{ item.subject }}</span>
+                            </div>
+                        </li>
+
+                        
+                    </ul> 
+				{% endfor %}
+                <div id="loadMore">向下显示更多课程</div> 
+                <div id="showLess">木有课了</div>
+				{{appoint_info}}
+            <div class="scrolltop"><a href="#" class=""><img src="{% static 'Images/icons/top.png' %}" alt="Go on top" title="Go on top" /></a></div>
+        </div>
+<!--End of page container-->
+<script type="text/javascript" src="{% static 'js/jquery.swipebox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/idangerous.swiper-2.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/idangerous.swiper.scrollbar-2.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.tabify.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.fitvids.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/code.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/load.js' %}"></script>
+
+
+    </div>    
+    <footer>
+        <ul class="footer" type="none">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </footer>
+</body>
+</html>
